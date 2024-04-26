@@ -9,7 +9,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-def pred(data):
+def pred(data, period):
 
     # Ensure 'YEAR' is in a proper date format
     data['YEAR'] = pd.to_datetime(data['YEAR'].astype(str) + "-01-01")
@@ -41,7 +41,7 @@ def pred(data):
 
     # Generate future dates for prediction
     # We use the current date and add the desired number of future days
-    future_dates = pd.date_range(current_date, periods=7, freq='D')
+    future_dates = pd.date_range(current_date, periods=period, freq='D')
 
     # Convert to DataFrame with 'ds' column for Prophet
     future_dates_df = pd.DataFrame({'ds': future_dates})
@@ -49,7 +49,7 @@ def pred(data):
     # Predict future values
     forecast = model.predict(future_dates_df)
 
-    return model,forecast
+    return model,future_dates_df
 
 #fig2 = model.plot_components(forecast)
 #plt.show()

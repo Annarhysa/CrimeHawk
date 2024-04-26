@@ -44,4 +44,4 @@ def classification(data, state, district, year):
 
     classification_result = "High-Crime" if predicted_profile[0] == 1 else "Low-Crime"
 
-    return classification_report
+    return classification_result
