@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekend Plans Suggestion App</title>
+    <link rel="stylesheet" href="static/index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CrimeHawk</h1>
+        <form id = 'search-form' action = "/crime_output" method = "post">
+            <label for="input_state">Enter your state:</label>
+            <input type="text" id="input_state" name ="input_state" placeholder="Eg: Maharashtra">
+            <div id="suggestions"></div>
+
+            <label for="input_district">Enter your district:</label>
+            <input type="text" id="input_district" name ="input_district" placeholder="Eg: Mumbai">
+            <div id="suggestions"></div>
+
+            <label for="input_year">Enter a year:</label>
+            <input type="text" id="input_year" name ="input_year" placeholder="Eg: 2001">
+            <div id="suggestions"></div>
+
+            <label for="input_period">Enter a period of days for forecast:</label>
+            <input type="text" id="input_period" name ="input_period" placeholder="Eg: 7">
+            <div id="suggestions"></div>
+
+
+            <button type = "submit" value = "Submit">Get Results</button>
+        </form>
+    </div>
+    <script src="static/script.js"></script>
+</body>
+</html>

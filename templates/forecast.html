@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/songs.css">
+    <title>Weekend Plans</title>
+</head>
+<body>
+    <div id = container>
+        <h1>{{ comment }}</h1>
+        <hr>
+    </div>
+    <div id = plans>
+        {% for items in song %}
+            <li>{{ items}}</li>
+        {% endfor %}
+    </div>
+    <form action = '/'>
+        <button type = "submit" value = "Submit">Back to Home</button>
+    </form>
+</body>
+</html>
