@@ -23,14 +23,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function getFilteredSuggestions(inputText) {
         // Example: Fetch suggestions from a server based on inputText
-        const allSuggestions = ['Florence','Milan','Naples','Edinburgh','Glasgow','Manchester','Birmingham','Liverpool',
-        'Bristol','Cardiff','Belfast','Dublin','New York','Los Angeles','Chicago','San Francisco','Miami','London','Tokyo',
-        'Sydney','Paris','Rome','Cairo','Rio de Janeiro','Dubai','Seattle','Toronto','Berlin','Amsterdam','Barcelona','Munich',
-        'Vienna','Prague','Budapest','Athens','Istanbul','Moscow','Stockholm','Oslo','Copenhagen','Helsinki','Reykjavik',
-        'Dubrovnik','Santorini','Lisbon','Madrid','Seville','Jaipur','Delhi','Agra','Bangkok','Phuket','Chiang Mai',
-        'Krabi','Kyoto','Osaka','Hiroshima','Nara','Sapporo','Okinawa','Melbourne','Brisbane','Perth','Adelaide','Auckland',
-        'Wellington','Christchurch','Venice','Mumbai','Seoul','Beijing','Shanghai','Hong Kong','Singapore','Kuala Lumpur',
-        'Bangalore','Chennai'];
+        const allSuggestions = ["ANDHRA PRADESH", "ARUNACHAL PRADESH", "ASSAM", "BIHAR", "CHHATTISGARH", "GOA", "GUJARAT", 
+        "HARYANA", "HIMACHAL PRADESH", "JAMMU & KASHMIR", "JHARKHAND", "KARNATAKA", "KERALA", "MADHYA PRADESH", 
+        "MAHARASHTRA", "MANIPUR", "MEGHALAYA", "MIZORAM", "NAGALAND", "ODISHA", "PUNJAB", "RAJASTHAN", "SIKKIM", 
+        "TAMIL NADU", "TRIPURA", "UTTAR PRADESH", "UTTARAKHAND", "WEST BENGAL", "A & N ISLANDS", "CHANDIGARH", 
+        "D & N HAVELI", "DAMAN & DIU", "DELHI UT", "LAKSHADWEEP", "PUDUCHERRY"];
         return allSuggestions.filter(function(suggestion) {
             return suggestion.toLowerCase().startsWith(inputText);
         });
