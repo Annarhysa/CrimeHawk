@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/songs.css">
+    <link rel="stylesheet" href="static/forecast.css">
     <title>Weekend Plans</title>
 </head>
 <body>
     <div id = container>
-        <h1>{{ comment }}</h1>
+        <h3>{{ crime_type }}</h3>
+        <h3> {{ predicted_rates}}</h3>
+        <h3>{{class_result}}</h3>
         <hr>
     </div>
-    <div id = plans>
+    <!-- 
+    <div id = forecast>
         {% for items in song %}
             <li>{{ items}}</li>
         {% endfor %}
     </div>
+    -->
     <form action = '/'>
         <button type = "submit" value = "Submit">Back to Home</button>
     </form>
